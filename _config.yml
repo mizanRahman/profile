@@ -3,7 +3,7 @@ title: Mizanur Rahman Khan
 email: mizan.cse.buet@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal profile of Mizanur Rahman Khan.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/profile" # the subpath of your site, e.g. /blog/
 url: "http://mizanrahman.github.io" # the base hostname & protocol for your site
 twitter_username: khanmizan
 github_username:  mizanrahman
