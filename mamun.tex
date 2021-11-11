@@ -1,0 +1,269 @@
+%-------------------------
+% Resume in Latex
+% Author : Mamun
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+% changed to -4 from -1
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-4pt}\item %old value -1
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-20pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Abdullah Al Mamun} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+8801739813222} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{mamunn.08@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faLinkedin \hspace{2pt} \texttt{{\href{https://www.linkedin.com/in/mamun08/}{\myuline{mamun08}}}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{B.D. Citizen}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Kona Software Lab Limited}{Jan. 2019 -- Present}
+      {Principal Software Engineer}{Dhaka, BD}
+      \resumeItemListStart
+        \resumeItem{Lead a team of software developers to develop a high performing and scalable microservice based software}
+        \resumeItem{Understanding client requirements and define scope of development and deliver features on time}
+         \resumeItem{Analyzed and monitor System Performance via APM and improved code to achieve consistent 200 financial transactions per second}
+        \resumeItem{Made 60\% performance improvement of daily clearing batch process for clearing of more than 4M transaction}
+        \resumeItem{Investigate, debug of critical and major production issue and delivered solution according within SLA with client}
+         \resumeItem{Trained and Mentored new recruits and developed them to become reliable resources for the organization}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Kona Software Lab Limited}{Nov. 2015 -- Dec. 2018}
+      {Software Engineer}{Dhaka, BD}
+      \resumeItemListStart
+        \resumeItem{Design, develop and scale Prepaid Card System consisting of 20+ microservices to handle financial transaction}
+        \resumeItem{Performed successful migration of DB to upgrade system and database architecture of 2M users across 10+ database schemas}
+        \resumeItem{Developed 5+ library module for common functionality such as logging, cryto-operaton, rest service for using in all microservices}
+
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Kona Software Lab Limited}{Oct. 2014 -- Oct. 2015}
+      {Jr. Software Engineer}{Dhaka, BD}
+      \resumeItemListStart
+        \resumeItem{Study and research about PKI(Publi Key Infrastructure) and developed full working solution of PKI components}
+        \resumeItem{Developed core features of the system such as Key Generation, Certificate issuing, publication and revocation}
+        \resumeItem{Developed user interface using Java Swing for management of KonaCA System}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Inspiring Through Information Web (ITIW)}{Jan. 2013 -- Aug. 2013}
+      {Developer}{Dhaka, BD}
+      \resumeItemListStart
+        \resumeItem{Developed a user tracking system using Amazon EC2, DynamoDB, PHP to determine user game playing behavior}
+        \resumeItem{Developed different charts and graphs for visualizing user game playing behavior using JavaScript plugins}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING & SKILLS-----------
+\section{TECH SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages \& Framework} {: Java, Spring, spring Boot, JPA, Hibernate, C,Python, JavaScript, SQL (Oracle, MySQL), NoSQL(DynamoDB)}\vspace{2pt} \\
+      \textbf{Tools \& Technology} {: JMS, RabbitMQ, Redis, Jira,Confluence, AWS, Wildfly, Undertow, Tomcat, GitHub, Maven, Gradle} \\
+      \textbf{Performance \& Monitoring} {: Apache JMeter, JENNIFER, ELK Stack, APM}
+    }}
+ \end{itemize}
+ 
+ %
+%-----------SOFT SKILLS-----------
+\vspace{-25pt}
+\section{SOFT SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Great At} {: Debugging, Analysing Problems and finding solutions, Teamwork}\vspace{2pt} \\
+      \textbf{Good At} {: Designing solutions, Adapting to new environment and culture, Respecting different opinions}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\vspace{-25pt}
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Nagad} - {\href{https://nagad.com.bd/en/} {\myuline{nagad.com.bd}}}}{}
+          \linebreak
+          \emph{Nagad is the 2nd largest Mobile Financial Service (MFS) in Bangladesh and one of the fastest growing MFS in the world with more than \textbf{50M user base} and more than 3M daily transactions.The whole system is designed based on KonaCard Platform. This platform has support for payment on different channel like Mobile Wallet,USSD, E-Commerce. This platform also integrated with different other platform like Telco, Bank, Third party, provide service like mobile recharge, Add money from Bank, Utility Bill Payment etc.}
+          \resumeItemListStart
+            \resumeItem{Develop a digital financial system with user registration, account creation, hundreds of transaction support, account management, clearing and settlement of commission among multiple partners}
+            \resumeItem{Involved with from requirement understanding from stakeholders to actively participating in design, development, performance testing, leading and mentoring developers }
+          \resumeItemListEnd
+          {\textbf{Tech Stack:}} {Spring Framework, Spring Boot, Spring Batch, JPA, Hibernate, Oracle DB, Redis, RabbitMQ, APM, HA Proxy, Undertow}
+        \resumeProjectHeading
+         {\textbf{Kona Card} - {\href{https://konai.com/business/fintech/kona_card}{\myuline{Kona Card}}}}{Nov. 2015 -- Mar. 2018}
+         \linebreak
+         \emph{KonaCard is a secure, fast and robust platform based on host card emulation (HCE) and tokenization.This is a core micro-service based platform that enables issuance and authorization of virtual card that can be kept in a smartphone with highly secured and standard process. This platform can easily be integrated with payment systems, identity verification. This platform specialized on payment - issuing and authorizing payment through NFC,e-commerce, QR payment and all other mode of payment.}
+          \resumeItemListStart
+            \resumeItem{Involved with development of the core modules of Kona Card System, \textbf{visited South Korea} four times during development and deployment phase of the project}
+            \resumeItem{Perform performance testing with Apache JMeter and monitoring in JENNIFER and made significant improvement to the system}
+          \resumeItemListEnd
+          {\textbf{Tech Stack:}} {Spring Framework, Spring Boot, Spring Batch, JPA, Hibernate, Gradle, HCE, ISO8583, Oracle DB, Redis, RabbitMQ, APM, Undertow}
+        \resumeProjectHeading
+          {\textbf{NexusPay} - {\href{https://www.dutchbanglabank.com/nexuspay/nexusPay-home.html}{\myuline{dutchbanglabank.com/nexuspay}}}}{Sept. 2017 -- Present}
+          \linebreak
+          \emph{NexusPay is the \textbf{first fully cardless payment} solution in Bangladesh which supports different kind of payments, fund transfer services which is used by millions of user in Bangladesh}
+          \resumeItemListStart
+            \resumeItem{Made overall 20\% optimization in response time by introducing datasource connection pooling and http connection reusing}
+            \resumeItem{Participate in design, development and continuous monitoring and improvement of the product }
+          \resumeItemListEnd
+          {\textbf{Tech Stack:}} {Spring Framework, Spring Boot, JPA, Hibernate, Oracle DB, Redis, RabbitMQ, APM, Undertow}          
+      \resumeProjectHeading
+         {\textbf{KonaCA}}{Oct. 2014 -- Oct. 2015}
+          \resumeItemListStart
+            \resumeItem{Kona-CA(Certificate Authority) is a full PKI implementation with all components like CA, RootCA, KGS, CRL etc}
+            \resumeItem{Involved with  design, development and testing of the system}
+          \resumeItemListEnd
+          {\textbf{Tech Stack:}} {Java, Java Swing, MySQL, BouncyCastle, LDAP, JPA, EclipseLink}
+    \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bangladesh University of Engineering and Technology (BUET)}{Graduated: 2014}
+      {B.Sc. in Computer Science and Engineering}{Dhaka, BD}
+  \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
